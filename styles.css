@@ -337,3 +337,142 @@ body {
     border-radius: 5px;
     font-size: 0.8em;
 }
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+    .left-section h1 {
+        text-align: center;
+        padding: auto;
+    }
+    .left-section h2 {
+        text-align: center;
+        padding: auto;
+    }
+    .right-section h3 {
+        text-align: center;
+        padding: auto;
+    }
+    
+    
+    .left-section, .right-section {
+        width: 100%; /* Full width for mobile */
+        padding: 20px;
+        margin: 0;
+        height: auto;
+    }
+
+    .left-section {
+        padding-top: 20px;
+        position: static; /* Remove sticky positioning for mobile */
+    }
+
+    .right-section {
+        overflow-y: visible; /* Remove overflow scroll for mobile */
+        max-height: none; /* Remove max-height for scrolling content */
+    }
+
+    /* Reduce font sizes for better fit on small screens */
+    .left-section h1 {
+        font-size: 24px;
+    }
+
+    .left-section h2 {
+        font-size: 1.2em;
+    }
+
+    .nav-menu ul {
+        display: flex;              /* Set items in a row */
+        justify-content: center;     /* Center items horizontally */
+        padding-top: 10px;           /* Adjust padding as needed */
+    }
+
+    .nav-menu li {
+        margin: 0 10px;              /* Add horizontal space between items */
+    }
+
+    .nav-item {
+        font-size: 12px;             /* Adjust font size for mobile */
+    }
+
+    /* Adjust image sizes */
+    .headshot {
+        width: 100px;
+        height: 100px;
+        padding: auto;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .job-card {
+        text-align: center;
+    }
+
+    /* Job content adjustments for mobile */
+    .job-card .job {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Align date at the top left */
+    .job-card .left {
+        width: 100%;
+        text-align: left; /* Align text to the left */
+        font-size: 0.9em;
+        padding: 5px;
+        order: -1; /* Ensures the date is first in order */
+    }
+
+    /* Center the logo/image in the middle */
+    .experience-logo-KG {
+        margin: 15px auto; /* Center align the image */
+        width: 80px; /* Adjust size as needed */
+        height: 160px;
+    }
+    .experience-logo-JV {
+        margin: 15px auto; /* Center align the image */
+        width: 160px; /* Adjust size as needed */
+        height: 80px;
+    }
+    .experience-logo{
+        margin: 15px auto; /* Center align the image */
+        width: 80px; /* Adjust size as needed */
+        height: 80px;
+    }
+    .education-logo-ND{
+        margin: 15px auto; /* Center align the image */
+        width: 100px; /* Adjust size as needed */
+        height: 100px;
+    }
+    /* Adjust description width to fit screen */
+    .job-card .right {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    /* Job and project cards adjustments */
+    .job-card, .project-card {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .job-card .job .left, .project .left {
+        width: 100%; /* Full width for images */
+        text-align: center;
+        margin: auto;
+    }
+
+    .job-card .job .right, .project .right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .project-thumbnail {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}

@@ -1,9 +1,11 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #170a29;
@@ -13,24 +15,27 @@ body {
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     background: radial-gradient(circle 400px at var(--mouse-x) var(--mouse-y), rgb(59, 7, 59), #170a29 100%);
-
     background-blend-mode: overlay;
     transition: background 0.1s ease;
 }
 
+/* Container */
 .container {
     display: flex;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-.about-p .link
-{
+
+/* About Paragraph Links */
+.about-p .link {
     text-decoration: none;
     color: #ccd6f6;
     font-weight: bold;
     transition: color 0.3s;
 }
+
+/* Resume Link */
 .resume-link {
     display: inline-flex;
     align-items: center;
@@ -42,25 +47,22 @@ body {
 }
 
 .resume-icon {
-    width: 25px; /* Adjust size as needed */
+    width: 25px;
     height: 25px;
-    fill: currentColor; /* Matches the text color */
-    margin-left: 8px; /* Space between text and icon */
+    fill: currentColor;
+    margin-left: 8px;
     transition: transform 0.3s ease;
 }
 
 .resume-link:hover .resume-icon {
-    transform: translateX(10px); /* Slight animation on hover */
+    transform: translateX(10px);
 }
-#experience a:hover{
+
+#experience a:hover, #education a:hover, #about a:hover {
     color: #A14DD1;
 }
-#education a:hover{
-    color: #A14DD1;
-}
-#about a:hover{
-    color: #A14DD1;
-}
+
+/* Left Section */
 .left-section {
     width: 45%;
     padding: 30px;
@@ -71,16 +73,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
-    justify-content: space-between; /* Add this line */
+    justify-content: space-between;
 }
-
 
 .left-section .social-links {
     margin-top: 30px;
-
 }
-
 
 .left-section h1 {
     font-size: 32pt;
@@ -92,30 +90,32 @@ body {
     margin-top: 10px;
     color: #dce2f7;
 }
+
 .social-icon {
     width: 50px;
     height: 50px;
     fill: #ccd6f6;
 }
+
+/* Headshot */
 .headshot {
-    width: 150px; 
-    height: 150px; 
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
     float: left;
     margin: 15px 15px 0 0;
-
     box-shadow: 0px 5px 15px #A14DD1;
-
-    shape-outside: circle(); 
+    shape-outside: circle();
 }
+
 .left-section p {
     margin-top: 20px;
     font-size: 1em;
     line-height: 1.6;
-    
 }
 
+/* Navigation Menu */
 .nav-menu ul {
     list-style: none;
     padding: 0;
@@ -134,15 +134,11 @@ body {
     font-size: 14px;
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Gap between text and line */
+    gap: 10px;
     transition: color 0.3s;
 }
 
-.nav-item:hover {
-    color: #A14DD1;
-}
-
-.nav-item.active {
+.nav-item:hover, .nav-item.active {
     color: #A14DD1;
 }
 
@@ -153,174 +149,130 @@ body {
     height: 1px;
     background-color: #8892b0;
     transition: width 0.3s ease-in-out;
-    margin-right: 5px; /* Adjust spacing between line and text */
+    margin-right: 5px;
 }
 
-/* Expand the line only for active or hovered items */
-.nav-item.active::before,
-.nav-item:hover::before {
-    width: 70px; /* Set desired width */
+.nav-item.active::before, .nav-item:hover::before {
+    width: 70px;
     background-color: #A14DD1;
 }
 
-
-
-
-.left-section .social-links a {
-    color: #8892b0;
-    text-decoration: none;
-    margin-right: 10px;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.left-section .social-links a:hover {
-    color: #EB1A4E;
-}
-
+/* Right Section */
 .right-section {
     width: 55%;
-    margin-left: 5%; /* Adjusts space next to the left section */
+    margin-left: 5%;
     padding: 30px;
-    overflow-y: scroll; /* Ensure the section is scrollable */
+    overflow-y: scroll;
     padding-top: 100px;
     max-height: 100vh;
     box-sizing: border-box;
 }
 
-/* Hide scrollbar in Webkit browsers */
 .right-section::-webkit-scrollbar {
     display: none;
 }
 
-/* Optional: Hide scrollbar in Firefox */
 .right-section {
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
+
 .right-section h3 {
     font-size: 1.5em;
     color: white;
     margin-bottom: 10px;
 }
-.right-section #education{
+
+.right-section #education {
     margin-top: 50px;
 }
-.right-section #experience{
+
+.right-section #experience {
     margin-top: 100px;
 }
-.right-section #projects{
+
+.right-section #projects {
     margin-top: 50px;
 }
-.right-section .about-p{
+
+.right-section .about-p {
     color: #8892b0;
     font-size: 13pt;
     line-height: 1.5;
     margin-top: 10px;
 }
+
+/* Job and Project Cards */
 .job-card, .project-card {
     display: block;
     text-decoration: none;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    background-color: #160929;;
+    background-color: #160929;
     transition: background-color 0.3s, transform 0.3s;
 }
-.job-card .job{
-    display: flex;
 
+.job-card .job, .project-card .project {
+    display: flex;
+    color: #ccd6f6;
 }
+
 .job-card:hover, .project-card:hover {
     background-color: rgba(100, 255, 218, 0.1);
     transform: translateY(-5px);
 }
-.job-card:hover h4
-{
-    color:#A14DD1;
-}
-.job-card .job, .project-card .project {
-    color: #ccd6f6;
-}
-.job-card .job .description {
+
+.job-card .job .description, .project-card .project .description {
     color: #8892b0;
 }
-.job-card .job .left {
+
+.job-card .job .left, .project .left {
     width: 25%;
     font-size: 12pt;
-    padding-left: 0;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    
-    
 }
-.job-card .job .right {
+
+.job-card .job .right, .project .right {
     width: 75%;
     padding-left: 20px;
 }
 
-.job-card header {
-    font-size: 0.9em;
-    color: #8892b0;
-    margin-bottom: 5px;
+.experience-logo, .experience-logo-KG, .experience-logo-JV, .education-logo-ND {
+    margin-top: 20px;
+    justify-content: center;
 }
 
-
-
-.experience-logo
-{
-    margin-top: 20px;
+.experience-logo {
     width: 70px;
     height: 70px;
-    justify-content: center;
     margin-left: 25%;
 }
- .experience-logo-KG
-{
-    margin-top: 20px;
+
+.experience-logo-KG {
     width: 50px;
     height: 100px;
-    justify-content: center;
     margin-left: 25%;
 }
-.experience-logo-JV
-{
-    margin-top: 20px;
+
+.experience-logo-JV {
     width: 150px;
     height: 75px;
-    justify-content: center;
 }
 
-.education-logo-ND
-{
-    margin-top: 20px;
+.education-logo-ND {
     width: 110px;
     height: 110px;
-    justify-content: center;
-}
-.project-card .project {
-    display: flex;
-}
-
-.project .left {
-    width: 25%; /* Adjust as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project .right {
-    width: 75%;
-    padding-left: 20px;
 }
 
 .project-thumbnail {
-    width: 100%; /* Ensures the image fits within the left section */
-    height: auto;
+    width: 100%;
     max-width: 150px;
     max-height: 150px;
     object-fit: cover;
 }
+
 .tech-stack {
     list-style: none;
     display: flex;
@@ -336,4 +288,76 @@ body {
     font-weight: bold;
     border-radius: 5px;
     font-size: 0.8em;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        height: auto;
+    }
+
+    .left-section {
+        padding-top: 20px;
+        position: static;
+    }
+
+    .right-section {
+        overflow-y: visible;
+        max-height: none;
+    }
+
+    .left-section h1 {
+        font-size: 24px;
+    }
+
+    .left-section h2 {
+        font-size: 1.2em;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .headshot {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .job-card, .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .job-card .job .left, .project .left {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .job-card .job .right, .project .right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .project-thumbnail {
+        max-width: 100px;
+        max-height: 100px;
+    }
 }

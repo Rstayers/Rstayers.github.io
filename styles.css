@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #170a29;
+    color: #ccd6f6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: radial-gradient(circle 400px at var(--mouse-x) var(--mouse-y), rgb(59, 7, 59), #170a29 100%);
+
+    background-blend-mode: overlay;
+    transition: background 0.1s ease;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-p .link
+{
+    text-decoration: none;
+    color: #ccd6f6;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    color: #ccd6f6;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 18pt;
+    text-decoration: none;
+}
+
+.resume-icon {
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    fill: currentColor; /* Matches the text color */
+    margin-left: 8px; /* Space between text and icon */
+    transition: transform 0.3s ease;
+}
+
+.resume-link:hover .resume-icon {
+    transform: translateX(10px); /* Slight animation on hover */
+}
+#experience a:hover{
+    color: #A14DD1;
+}
+#about a:hover{
+    color: #A14DD1;
+}
+.left-section {
+    width: 45%;
+    padding: 30px;
+    padding-top: 100px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    justify-content: space-between; /* Add this line */
+}
+
+
+.left-section .social-links {
+    margin-top: 30px;
+
+}
+
+
+.left-section h1 {
+    font-size: 32pt;
+    color: #dce2f7;
+}
+
+.left-section h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #dce2f7;
+}
+.social-icon {
+    width: 50px;
+    height: 50px;
+    fill: #ccd6f6;
+}
+.headshot {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    float: left;
+    margin: 15px 15px 0 0;
+
+    box-shadow: 0px 5px 15px #A14DD1;
+
+    shape-outside: circle(); 
+}
+.left-section p {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+    
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 75px;
+}
+
+.nav-menu li {
+    position: relative;
+    margin: 20px 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #8892b0;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Gap between text and line */
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #A14DD1;
+}
+
+.nav-item.active {
+    color: #A14DD1;
+}
+
+.nav-item::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #8892b0;
+    transition: width 0.3s ease-in-out;
+    margin-right: 5px; /* Adjust spacing between line and text */
+}
+
+/* Expand the line only for active or hovered items */
+.nav-item.active::before,
+.nav-item:hover::before {
+    width: 70px; /* Set desired width */
+    background-color: #A14DD1;
+}
+
+
+
+
+.left-section .social-links a {
+    color: #8892b0;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.left-section .social-links a:hover {
+    color: #EB1A4E;
+}
+
+.right-section {
+    width: 55%;
+    margin-left: 5%; /* Adjusts space next to the left section */
+    padding: 30px;
+    overflow-y: scroll; /* Ensure the section is scrollable */
+    padding-top: 100px;
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar in Webkit browsers */
+.right-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optional: Hide scrollbar in Firefox */
+.right-section {
+    scrollbar-width: none; /* Firefox */
+}
+.right-section h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+.right-section #education{
+    margin-top: 50px;
+}
+.right-section #experience{
+    margin-top: 100px;
+}
+.right-section #projects{
+    margin-top: 50px;
+}
+.right-section .about-p{
+    color: #8892b0;
+    font-size: 13pt;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.job-card, .project-card {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #160929;;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.job-card .job{
+    display: flex;
+
+}
+.job-card:hover, .project-card:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+}
+.job-card:hover h4
+{
+    color:#A14DD1;
+}
+.job-card .job, .project-card .project {
+    color: #ccd6f6;
+}
+.job-card .job .description {
+    color: #8892b0;
+}
+.job-card .job .left {
+    width: 25%;
+    font-size: 12pt;
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    
+}
+.job-card .job .right {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.job-card header {
+    font-size: 0.9em;
+    color: #8892b0;
+    margin-bottom: 5px;
+}
+
+
+
+.experience-logo
+{
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    margin-left: 25%;
+}
+ .experience-logo-KG
+{
+    margin-top: 20px;
+    width: 50px;
+    height: 100px;
+    justify-content: center;
+    margin-left: 25%;
+}
+.experience-logo-JV
+{
+    margin-top: 20px;
+    width: 150px;
+    height: 75px;
+    justify-content: center;
+}
+
+.education-logo-ND
+{
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+    justify-content: center;
+}
+.project-card .project {
+    display: flex;
+}
+
+.project .left {
+    width: 25%; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .right {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.project-thumbnail {
+    width: 100%; /* Ensures the image fits within the left section */
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+}
+.tech-stack {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tech-stack li {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #A14DD1;
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.8em;
+}

@@ -5,9 +5,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #170a29;
-    color: #ccd6f6;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -175,7 +172,7 @@ body {
 }
 
 .left-section .social-links a:hover {
-    color: #EB1A4E;
+    color: #A14DD1;
 }
 
 .right-section {

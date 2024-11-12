@@ -339,6 +339,19 @@ body {
 }
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    body {
+        background-color: #170a29; /* Fallback background color */
+        color: #ccd6f6;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        overflow-x: hidden;
+    
+        /* Set up the gradient */
+        background: radial-gradient(circle 400px at center, rgb(59, 7, 59), #170a29 100%);
+        background-blend-mode: overlay;
+        transition: background 0.1s ease;
+    }
     .container {
         flex-direction: column; /* Stack sections vertically */
     }

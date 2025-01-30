@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -52,8 +53,10 @@ body {
 }
 
 .resume-link:hover .resume-icon {
+    
     transform: translateX(10px); /* Slight animation on hover */
 }
+
 #experience a:hover{
     color: #A14DD1;
 }
@@ -140,10 +143,12 @@ body {
     transition: color 0.3s;
 }
 
-.nav-item:hover {
-    color: #A14DD1;
-}
 
+.nav-item:hover, .resume-link:hover {
+    transform: scale(1.05);
+    color: #fff;
+    text-shadow: 0 0 5px #A14DD1;
+}
 .nav-item.active {
     color: #A14DD1;
 }
@@ -266,8 +271,6 @@ body {
     color: #8892b0;
     margin-bottom: 5px;
 }
-
-
 
 .experience-logo
 {

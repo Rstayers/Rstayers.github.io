@@ -5,14 +5,15 @@
     box-sizing: border-box;
 }
 html {
-    overflow: hidden;
-    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto; /* Prevent horizontal scrolling */
+
     overflow-x: hidden; /* Prevent horizontal scrolling */
     background: #170a29;
     background: radial-gradient(circle 400px at var(--mouse-x) var(--mouse-y), rgb(59, 7, 59), #170a29 100%);
@@ -190,9 +191,10 @@ body {
     margin-left: 5%; /* Adjusts space next to the left section */
     padding: 30px;
     padding-top: 100px;
-    max-height: 100vh;
+    max-height: 100dvh;
     overflow-y: auto; /* Allows scrolling only when needed */
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Hide scrollbar in Webkit browsers */

@@ -64,6 +64,9 @@ body {
 #education a:hover{
     color: #A14DD1;
 }
+#publications a:hover{
+    color: #A14DD1;
+}
 #about a:hover{
     color: #A14DD1;
 }
@@ -214,6 +217,9 @@ body {
     margin-bottom: 10px;
 }
 .right-section #education{
+    margin-top: 50px;
+}
+.right-section #publications{
     margin-top: 50px;
 }
 .right-section #experience{
